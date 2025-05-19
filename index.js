@@ -10,5 +10,5 @@ app.use(express.json());
 
 app.use('/api/ine', ineRoutes);
 
-const PORT = process.env.PORT || 3306;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Servidor en puerto ${PORT}`));
