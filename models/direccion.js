@@ -1,10 +1,10 @@
 const db = require('../config/db');
 
 class Direccion {
-  static async create({ personaId, calle, numeroExterior, colonia, municipio, estado, codigoPostal }) {
+  static async create({ personaId, calle, numero_exterior, colonia, municipio, estado, codigo_postal }) {
     const [result] = await db.query(
       'INSERT INTO direcciones (persona_id, calle, numero_exterior, colonia, municipio, estado, codigo_postal) VALUES (?, ?, ?, ?, ?, ?, ?)',
-      [personaId, calle, numeroExterior, colonia, municipio, estado, codigoPostal]
+      [personaId, calle, numero_exterior, colonia, municipio, estado, codigo_postal]
     );
     return result.insertId;
   }
