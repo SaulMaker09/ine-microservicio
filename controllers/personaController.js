@@ -63,6 +63,7 @@ exports.obtenerPersona = async (req, res) => {
       message: 'Error al obtener persona' 
     });
   }
+};
 
   exports.obtenerTodasLasPersonas = async (req, res) => {
   try {
@@ -155,5 +156,4 @@ exports.eliminarPersonaPorCurp = async (req, res) => {
       message: 'Error al eliminar persona' 
     });
   }
-}
 };
