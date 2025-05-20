@@ -9,6 +9,11 @@ class Persona {
     return result.insertId;
   }
 
+  static async findAll(){
+    const [rows] = await db.query('SELECT * FROM personas');
+    return rows;
+  }
+
   static async findById(id) {
     const [rows] = await db.query('SELECT * FROM personas WHERE id = ?', [id]);
     return rows[0];
