@@ -1,10 +1,10 @@
 const db = require('../config/db');
 
 class Persona {
-  static async create({ nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento, genero }) {
+  static async create({ nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento }) {
     const [result] = await db.query(
-      'INSERT INTO personas (nombre, apellido_paterno, apellido_materno, fecha_nacimiento, genero) VALUES (?, ?, ?, ?, ?)',
-      [nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento, genero]
+      'INSERT INTO personas (nombre, apellido_paterno, apellido_materno, fecha_nacimiento) VALUES (?, ?, ?, ?)',
+      [nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento]
     );
     return result.insertId;
   }
