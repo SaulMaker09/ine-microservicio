@@ -8,7 +8,7 @@ app.use(express.json());
 
 // Rutas
 const personaRoutes = require('./routes/persona');
-app.use('/api/persona', personaRoutes);
+app.use('/micro/persona', personaRoutes);
 
 // Iniciar servidor
 const PORT = process.env.PORT || 3000;
